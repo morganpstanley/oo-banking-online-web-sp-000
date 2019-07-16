@@ -14,6 +14,7 @@ class Transfer
     if @sender.valid? && @receiver.valid? && @status == "pending"
       true
     else
+      @status = "projected"
       false
     end
   end
